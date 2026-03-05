@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Environments / Secrets
+.env
+.env.*
+!.env.example
+
+# Bruno
+# 建議忽略包含私鑰的環境變數檔，僅保留範例檔
+# environments/*.yml
+# !environments/*.sample.yml
+results.xml
+results.json
+.bru/
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Python
+.python-version
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
