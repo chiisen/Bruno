@@ -135,6 +135,36 @@ npm install -g @usebruno/cli
 
 ---
 
+## Postman CLI 執行整個 Collection
+
+```bash!
+npx newman run "postman/Collection.postman_collection.json"
+```
+
+## Postman CLI 執行整個目錄
+
+```bash!
+cd /Users/user/github/bruno-test
+
+# npx 會自動下載並執行 newman
+npx newman run "postman/Collection.postman_collection.json" --folder "login"
+```
+
+## Bruno CLI 執行整個 Collection
+
+```bash!
+(cd "Collection" && bru run --env Local --output results.json)
+```
+
+## Bruno CLI 執行整個目錄
+
+```bash!
+cd /Users/user/github/bruno-test/Collection
+bru run "my-api/login" --env Local
+```
+
+---
+
 ## 💡 總結
 
 Bruno 不僅是一個工具，更是一種對 **開發者主權** 的回歸。它讓 API 測試資料不再是孤島，而是與專案代碼並肩作戰的資產。對於重視資安、效能與版控準確性的 Laravel 或現代化 Web 專案，Bruno 是絕對的首選。
